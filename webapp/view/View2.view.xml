@@ -1,0 +1,74 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="your.app.namespace.controller.CustomerDetail">
+
+    <Page title="{i18n>customerDetailTitle}">
+        <headerContent>
+            <ObjectHeader
+                title="{/ContactName}"
+                number="{/CustomerID}">
+                <attributes>
+                    <ObjectAttribute title="Contact Title" text="{/ContactTitle}"/>
+                    <ObjectAttribute title="Address" text="{/Address}"/>
+                    <ObjectAttribute title="Postal Code" text="{/PostalCode}"/>
+                </attributes>
+            </ObjectHeader>
+        </headerContent>
+        <content>
+            <Table
+                id="orderTable"
+                items="{
+                    path: 'Orders',
+                    sorter: {
+                        path: 'OrderID'
+                    }
+                }">
+                <columns>
+                    <Column>
+                        <Text text="Order ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="Ship City"/>
+                    </Column>
+                    <Column>
+                        <Text text="Order Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Required Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Shipped Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Customer ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="Company Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Country"/>
+                    </Column>
+                    <Column>
+                        <Text text="Delivery Status"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{OrderID}"/>
+                            <Text text="{ShipCity}"/>
+                            <Text text="{OrderDate}"/>
+                            <Text text="{RequiredDate}"/>
+                            <Text text="{ShippedDate}"/>
+                            <Text text="{CustomerID}"/>
+                            <Text text="{CustomerName}"/>
+                            <Text text="{Country}"/>
+                            <Text text="{DeliveryStatus}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
