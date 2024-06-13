@@ -8,10 +8,10 @@
 
     <Page title="Customer List">
         <content>
-            <SearchField placeholder="Search..." liveChange="onSearch"/>
+            <SearchField liveChange="onTestSearch"/>
             <Table
-                id="customerTable"
-                items=" ">
+                id="customerTab"
+                items="{modCustomer>/}">
                 <columns>
                     <Column>
                         <Text text="Customer ID"/>
@@ -29,16 +29,20 @@
                 <items>
                     <ColumnListItem
                         type="Navigation"
-                        press="onCustomerPress">
+                        press="onNavigazione">
                         <cells>
-                            <Text text="{CustomerID}"/>
-                            <Text text="{CompanyName}"/>
-                            <Text text="{City}"/>
-                            <Text text="{Fax}"/>
+                            <Text text="{modCustomer>CustomerID}"/>
+                            <Text text="{modCustomer>CompanyName}"/>
+                            <Text text="{modCustomer>City}"/>
+                            <Text text="{modCustomer>Fax}"/>
                         </cells>
                     </ColumnListItem>
                 </items>
             </Table>
         </content>
+        <footer>
+            <OverflowToolbar>
+            </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>

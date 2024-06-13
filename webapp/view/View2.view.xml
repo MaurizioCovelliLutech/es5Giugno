@@ -18,12 +18,7 @@
         <content>
             <Table
                 id="orderTable"
-                items="{
-                    path: 'Orders',
-                    sorter: {
-                        path: 'OrderID'
-                    }
-                }">
+                items="">
                 <columns>
                     <Column>
                         <Text text="Order ID"/>
