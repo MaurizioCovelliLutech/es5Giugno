@@ -5,18 +5,13 @@
     xmlns:form="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
     xmlns:u="sap.ui.unified" >
-    
+
     <Page title="Customer List">
         <content>
             <SearchField placeholder="Search..." liveChange="onSearch"/>
             <Table
                 id="customerTable"
-                items="{
-                    path: '/Customers',
-                    sorter: {
-                        path: 'CustomerID'
-                    }
-                }">
+                items=" ">
                 <columns>
                     <Column>
                         <Text text="Customer ID"/>

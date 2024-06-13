@@ -14,9 +14,6 @@ sap.ui.define([
 
     const sURL = "/V2/Northwind/Northwind.svc/";
 
-    // Mostrare inoltre i dati anagrafici dell’impiegato, ovvero Nome (FirstName), Cognome (LastName), 
-    // Data assunzione (HireDate, formattata gg/mm/yyyy), Titolo (Title)
-
     return Controller.extend("project1.controller.View1", {
 
         onInit: function () {
