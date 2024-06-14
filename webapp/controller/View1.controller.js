@@ -62,7 +62,7 @@ sap.ui.define([
 
         onNavigazione: function(){
 
-            var oRouter = this.getOwnerComponent().getRouter();
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("RouteView2");
         }
     })

@@ -103,7 +103,7 @@
 
         {
           "name": "RouteView2",
-          "pattern": ":?query:",
+          "pattern": "view2",
           "target": [
             "TargetView2"
           ]

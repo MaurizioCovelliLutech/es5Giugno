@@ -1,7 +1,7 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    controllerName="your.app.namespace.controller.CustomerDetail">
+    controllerName="project1.controller.View1">
 
     <Page title="{i18n>customerDetailTitle}">
         <headerContent>
