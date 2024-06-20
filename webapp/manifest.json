@@ -103,7 +103,7 @@
 
         {
           "name": "RouteView2",
-          "pattern": "view2",
+          "pattern": "view2/{customerId},{companyName},{contactName},{contactTitle},{address},{postalCode}",
           "target": [
             "TargetView2"
           ]

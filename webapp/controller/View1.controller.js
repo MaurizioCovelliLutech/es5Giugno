@@ -29,12 +29,12 @@ sap.ui.define([
             var oModel = new ODataModel(sURL);
 
             const oData = await new Promise((resolve, reject) => {
-              oModel.read("/Customers", {
-              success: function(oData, response) {
-                resolve(oData);
-              },
-              error: function(error) {
-              }
+                oModel.read("/Customers", {
+                success: function(oData, response) {
+                    resolve(oData);
+                },
+                    error: function(error) {
+                }
         });
     });  
     
@@ -60,11 +60,31 @@ sap.ui.define([
             }
         },
 
-        onNavigazione: function(){
+        onNavigazione: function(oEvent){
+            
+            //var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            //oRouter.navTo("RouteView2");
+            const oCustomerContext = oEvent.getSource().getBindingContext("modCustomer");
+            const sCustomerId = oCustomerContext.getProperty("CustomerID");
+            const sCompanyName = oCustomerContext.getProperty("CompanyName");
+            const sContactName = oCustomerContext.getProperty("ContactName");
+            const sContactTitle = oCustomerContext.getProperty("ContactTitle");
+            const sAddress = oCustomerContext.getProperty("Address");
+            const sPostalCode = oCustomerContext.getProperty("PostalCode");
+          
+            const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteView2", {
+                customerId: sCustomerId,
+                companyName: sCompanyName,
+                contactName: sContactName,
+                contactTitle: sContactTitle,
+                address: sAddress,
+                postalCode: sPostalCode
+                
+            });
+              
 
-            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("RouteView2");
-        }
+            }
+
+        });
     })
-
-})
