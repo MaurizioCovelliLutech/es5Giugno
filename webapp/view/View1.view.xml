@@ -42,7 +42,6 @@
         </content>
         <footer>
             <OverflowToolbar>
-                <Button text="Salpiamo" press="onNavigazione" />
             </OverflowToolbar>
         </footer>
     </Page>

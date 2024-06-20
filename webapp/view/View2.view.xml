@@ -5,12 +5,12 @@
   <Page title="Customer Detail">
     <headerContent>
       <ObjectHeader
-        title="{customerDetail>/ContactName}"
-        number="{customerDetail>/CustomerID}"
-        numberUnit="{customerDetail>/ContactTitle}">
+        title="{modInfo>contactName}"
+        number="{modInfo>CustomerID}"
+        numberUnit="{modInfo>contactTitle}">
         <attributes>
-          <ObjectAttribute title="Address" text="{customerDetail>address}"/>
-          <ObjectAttribute title="Postal Code" text="{customerDetail>postalCode}"/>
+          <ObjectAttribute title="Address" text="{modInfo>address}"/>
+          <ObjectAttribute title="Postal Code" text="{modInfo>postalCode}"/>
         </attributes>
       </ObjectHeader>
     </headerContent>
@@ -56,7 +56,7 @@
               <Text text="{= ${customerDetail>ShippedDate}.toLocaleDateString() }"/>
               <Text text="{= ${customerDetail>RequiredDate}.toLocaleDateString() }"/>
               <Text text="{customerDetail>CustomerID}"/>
-              <Text text="{customerDetail>CompanyName>}"/>
+              <Text text="{customerDetail>CompanyName}"/>
               <Text text="{customerDetail>ShipCountry}"/>
               <Text text="{customerDetail>DeliveryStatus}"/>
             </cells>

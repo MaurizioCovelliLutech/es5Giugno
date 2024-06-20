@@ -70,18 +70,23 @@ sap.ui.define([
            //var aOrders = oData.results;
 
             oData.results.forEach(order => {
-              order.CompanyName = customerInfo.companyName,
-              order.contactName = customerInfo.contactName,
-              order.contactTitle = customerInfo.contactTitle,
-              order.address = customerInfo.address,
-              order.postalCode = customerInfo.postalCode
+              order.CompanyName = customerInfo.companyName
           });
 
             var oCustomerDetailModel = new JSONModel({
-                orders: oData.results,
-            });
+                orders: oData.results
+           });
+
+            var modInfo = new JSONModel({
+                contactName: customerInfo.contactName,
+                contactTitle: customerInfo.contactTitle,
+                address: customerInfo.address,
+                postalCode: customerInfo.postalCode
+           });
 
             this.getView().setModel(oCustomerDetailModel, "customerDetail");
+            this.getView().setModel(modInfo, "modInfo");
+
 
             this.deliveryStatus();
       },
